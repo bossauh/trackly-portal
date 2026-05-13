@@ -1,3 +1,11 @@
+# Trackly
+
+Fast captures for your [Notion](https://www.notion.so/) money tracker (transactions, accounts, expenses). Built with [Next.js](https://nextjs.org).
+
+Configure `.env.local` with `NOTION_ACCESS_TOKEN` and your database IDs, then run the dev server below.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

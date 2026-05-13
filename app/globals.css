@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@import "react-day-picker/style.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #18181b;
 }
 
 @theme inline {
@@ -14,13 +15,35 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #09090b;
+    --foreground: #fafafa;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100dvh;
+}
+
+/**
+ * react-day-picker (Trackly modal): explicit colors so `color: inherit` on day cells is readable
+ * on both light and dark modal surfaces.
+ */
+.trackly-datetime-picker .rdp-root {
+  color: #18181b;
+  --rdp-accent-color: #18181b;
+  --rdp-accent-background-color: #e4e4e7;
+  --rdp-today-color: #52525b;
+  --rdp-outside-opacity: 0.55;
+}
+
+@media (prefers-color-scheme: dark) {
+  .trackly-datetime-picker .rdp-root {
+    color: #fafafa;
+    --rdp-accent-color: #fafafa;
+    --rdp-accent-background-color: #3f3f46;
+    --rdp-today-color: #a1a1aa;
+    --rdp-outside-opacity: 0.45;
+  }
 }
